@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { editTask } from '../JS/Actions';
 
 const EditTask = ({task}) => {
+  // The EditTask component provides a user interface for editing an existing task. It uses React Bootstrap components for styling and layout, and it interacts with the Redux store to dispatch actions for updating tasks. The component receives a task object as a prop, which contains the details of the task to be edited.
           const [show, setShow] = useState(false);
 
           const dispatch = useDispatch();
@@ -14,8 +15,8 @@ const EditTask = ({task}) => {
           const handleClose = () => setShow(false);
           const handleShow = () => setShow(true);
 
+          // The handleEdit function is responsible for dispatching the editTask action with the task's ID, updated title, and updated description to update the Redux store with the edited task details. After dispatching the action, it closes the modal.
           const handleEdit = () => {
- 
             dispatch(editTask(task.id, title, description));
             handleClose();
           };

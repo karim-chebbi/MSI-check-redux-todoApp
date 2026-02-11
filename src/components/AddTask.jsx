@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { addTask } from '../JS/Actions';
 
 const AddTask = () => {
+  // The AddTask component provides a user interface for adding new tasks to the task list. It uses React Bootstrap components for styling and layout, and it interacts with the Redux store to dispatch actions for adding tasks.
       const [show, setShow] = useState(false);
 
       const dispatch = useDispatch()
@@ -14,7 +15,7 @@ const AddTask = () => {
       const handleClose = () => setShow(false);
       const handleShow = () => setShow(true);
 
-
+      // The handleAdd function is responsible for creating a new task object with a unique ID, title, description, and a default isDone status of false. It then dispatches the addTask action to update the Redux store with the new task and closes the modal.
       const handleAdd = () => {
         let newTask = {id: Math.floor(Math.random() * 1001), title, description, isDone: false}
         dispatch(addTask(newTask))

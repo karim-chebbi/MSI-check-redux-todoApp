@@ -6,6 +6,9 @@ import DeleteTask from './DeleteTask';
 import EditTask from './EditTask';
 
 const TaskModel = ({task}) => {
+  // The TaskModel component is responsible for displaying the details of a single task, including its title, description, and status (done or not done). It also provides buttons for marking the task as done/undone, editing the task, and deleting the task. The component uses React Bootstrap for styling and layout, and it interacts with the Redux store to dispatch actions for updating the task's status.
+
+    // The useDispatch hook is used to access the dispatch function from the Redux store, allowing the component to dispatch actions such as marking a task as done or undone when the corresponding button is clicked.
     const dispatch = useDispatch()
   return (
     <div

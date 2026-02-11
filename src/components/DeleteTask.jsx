@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { deleteTask } from '../JS/Actions';
 
 const DeleteTask = ({task}) => {
+  // The DeleteTask component provides a user interface for confirming the deletion of a task. It uses React Bootstrap components for styling and layout, and it interacts with the Redux store to dispatch actions for deleting tasks.
      const [show, setShow] = useState(false);
 
      const dispatch = useDispatch()
@@ -11,6 +12,7 @@ const DeleteTask = ({task}) => {
      const handleClose = () => setShow(false);
      const handleShow = () => setShow(true);
 
+     // The handleDelete function is responsible for dispatching the deleteTask action with the task's ID to update the Redux store and remove the task from the list. After dispatching the action, it closes the modal.
      const handleDelete = () => {
         dispatch(deleteTask(task.id))
         handleClose()

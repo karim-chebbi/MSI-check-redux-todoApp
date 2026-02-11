@@ -5,8 +5,12 @@ import AddTask from './AddTask';
 import { Dropdown } from 'react-bootstrap';
 
 const TaskList = () => {
+// The TaskList component is responsible for displaying the list of tasks and providing filtering options based on their completion status. It uses the useSelector hook to access the todoList from the Redux store and manages the local state for the selected filter status (All, Done, Undone). The component renders the AddTask component for adding new tasks and a Dropdown for selecting the filter criteria. Based on the selected status, it filters and maps through the todoList to display the appropriate tasks using the TaskModel component.
+
+    // The useSelector hook is used to access the todoList from the Redux store, allowing the component to retrieve the current list of tasks and display them accordingly.
     const todoList = useSelector((state) => state.todoList);
 
+    // The useState hook is used to manage the local state for the selected filter status, which determines how the tasks are displayed based on their completion status (All, Done, Undone).
     const [status, setStatus] = useState("All")
 
     

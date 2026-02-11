@@ -8,6 +8,7 @@ import store from './JS/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  // Wrap the App component with the Provider component and pass the store as a prop
   <Provider store={store}>
     <React.StrictMode>
       <App />
